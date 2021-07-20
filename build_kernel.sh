@@ -6,4 +6,4 @@ export ANDROID_MAJOR_VERSION=r
 export ARCH=arm64
 
 make ARCH=arm64 exynos7885-a30_defconfig
-make ARCH=arm64 -j64
+make ARCH=arm64 -j4

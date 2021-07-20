@@ -1,0 +1,52 @@
+===================================================
+= Device    : SM - A305X               	  	      = 
+= Version   : 15 pro  		          =
+= Chipset   : Exynos 7904 7885 7884 - mali G71 mp2=
+= Android   : 11 R 	     					  =
+= Tipe      : Overclock, Underclock, UnderVolt    =
+= Developer : @minhka98   XDA  	  	     	      =
+= Contact   : @Minhker   Telegram ID	          =
+===================================================
+===================================================
+===================================================
+= Overclocked kernel increase performance 30%	  =
+= From a antutu score of 122k to 159k			  =
+= Banance performance and battery                 =
+===================================================
+===================================================
+= Overclock Big cpu from 1,8Ghz to 2,3Ghz         =
+= Overclock Litte cpu from 1,6Ghz to 1,8Ghz       =
+= Underclock Big cpu from 936mhz to 208mhz        =
+= Underclock Litte cpu from 449mhz to 208mhz      =
+= Overclock Gpu from 845mhz to 1,3Ghz             =
+= Gpu Vontage Control                             =
+= Reduce min_threshold and Max_threshold for Gpu  =
+= Reduce Vontage Cpu,Gpu,Mif and Int for Battery  =
+= Repair Freq of Thermal                          =
+= Repair Bus suport Cpu,Gpu                       =
+= Add more Governor                               =
+= Removing Security Stuffs                        =
+= Ect........     								  =
+===================================================
+what new 
+= Repair Bus suport Cpu,Gpu                       =
+= more performance 
+= Undervolt more
+= worked on magisk 20.4     
+===================================================
+What new ver 14.8 Add DTBO and DT
++ Add DTBO and DT and TW in this binary
++ Fixed jack not work vs dtbo
+===================================================
+What new ver 14.9 Fast charging
++ Fast charging 13% than stock(max from 2300mA to 2600mA) Accubattery app to check
++ Increase charging current
++ Some TW for battery
++ UnderVolt Camera
++ Have a guide to play game not drop fps
+===================================================
+what new ver 15. Pro
++ up to android 11
++ cpu 1794-2288
++ Spectrum Balance (default profile). need handset for test performance
++ more edit for charging

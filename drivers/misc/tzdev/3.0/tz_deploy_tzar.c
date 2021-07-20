@@ -32,7 +32,7 @@
 __asm__ (
   ".section .init.data,\"aw\"\n"
   "tzdev_tzar_begin:\n"
-  ".incbin \"" KBUILD_SRC "/drivers/misc/tzdev/3.0/startup.tzar\"\n"
+  ".incbin \"" KBUILD_SRC "drivers/misc/tzdev/3.0/startup.tzar\"\n"  //fix Error: file not found: /drivers/misc/tzdev/3.0/startup.tza
   "tzdev_tzar_end:\n"
   ".previous\n"
 );

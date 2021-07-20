@@ -50,14 +50,14 @@
 							dev = "/dev/block/platform/13500000.dwmmc0/by-name/vendor";
 							type = "ext4";
 							mnt_flags = "ro";
-							fsmgr_flags = "wait,verify,avb";
+							fsmgr_flags = "wait";
 						};
 						product {
 							compatible = "android,product";
 							dev = "/dev/block/platform/13500000.dwmmc0/by-name/product";
 							type = "ext4";
 							mnt_flags = "ro";
-							fsmgr_flags = "wait,verify,avb";
+							fsmgr_flags = "wait";
 						};
 					};
 				};
@@ -164,7 +164,7 @@
 					regulators {
 						b1_reg: BUCK1 {
 							regulator-name = "vdd_mif";
-							regulator-min-microvolt = <500000>;
+							regulator-min-microvolt = <400000>;
 							regulator-max-microvolt = <1100000>;
 							regulator-always-on;
 							regulator-ramp-delay = <12000>;
@@ -173,7 +173,7 @@
 
 						b2_reg: BUCK2 {
 							regulator-name = "vdd_cpucl0";
-							regulator-min-microvolt = <500000>;
+							regulator-min-microvolt = <400000>;
 							regulator-max-microvolt = <1300000>;
 							regulator-always-on;
 							regulator-ramp-delay = <12000>;
@@ -182,7 +182,7 @@
 
 						b3_reg: BUCK3 {
 							regulator-name = "vdd_cpucl1_2";
-							regulator-min-microvolt = <500000>;
+							regulator-min-microvolt = <400000>;
 							regulator-max-microvolt = <1300000>;
 							regulator-always-on;
 							regulator-ramp-delay = <12000>;
@@ -191,7 +191,7 @@
 
 						b4_reg: BUCK4 {
 							regulator-name = "vdd_int";
-							regulator-min-microvolt = <500000>;
+							regulator-min-microvolt = <400000>;
 							regulator-max-microvolt = <1200000>;
 							regulator-always-on;
 							regulator-ramp-delay = <12000>;
@@ -200,7 +200,7 @@
 
 						b5_reg: BUCK5 {
 							regulator-name = "vdd_g3d";
-							regulator-min-microvolt = <500000>;
+							regulator-min-microvolt = <400000>;
 							regulator-max-microvolt = <1300000>;
 							regulator-always-on;
 							regulator-ramp-delay = <12000>;
@@ -209,7 +209,7 @@
 
 						b6_reg: BUCK6 {
 							regulator-name = "vdd2_mem";
-							regulator-min-microvolt = <500000>;
+							regulator-min-microvolt = <400000>;
 							regulator-max-microvolt = <1300000>;
 							regulator-always-on;
 							regulator-ramp-delay = <12000>;
@@ -798,17 +798,23 @@
 			};
 			cpufreq {
 				domain@1 {
-					max-freq = <1768000>;
+					max-freq = <2080000>; //1768000
 
 					dm-constraints {
 						mif-perf {
-							table = < 1768000 1794000
+							table = <2288000  1794000
+							 	 2184000  1794000
+							 	 2080000  1794000
+							 	 1976000  1794000
+							 	 1872000  1794000
+								  1768000 1794000
 								  1664000 1539000
 								  1560000 1539000
 								  1352000 1352000
 								  1144000 1014000
-								   936000  546000
-								   728000  420000>;
+								   936000  845000
+								   728000  546000
+								   520000  420000>;
 						};
 					};
 				};
@@ -840,26 +846,38 @@
 						ctrl-type = <PM_QOS_MIN_LIMIT>;
 						execution-mode = <AARCH64_MODE>;
 							/* big	    lit */
-						table = < 1768000  1586000
+						table = < 2288000  1794000
+							  2184000  1794000
+							  2080000  1794000
+							  1976000  1794000
+							  1872000  1794000
+							  1768000  1794000
 							  1664000  839000
 							  1560000  839000
 							  1352000  839000
 							  1144000  839000
 							   936000  839000
-							   728000  839000 >;
+							   728000  839000
+							   520000  839000 >;
 					};
 
 					max-limit {
 						ctrl-type = <PM_QOS_MAX_LIMIT>;
 						execution-mode = <AARCH64_MODE>;
 							/* big	    lit */
-						table = < 1768000 1586000
+						table = < 2288000 1794000
+							  2184000 1794000
+							  2080000 1794000
+							  1976000 1794000
+							  1872000 1794000
+							  1768000 1794000
 							  1664000 1586000
 							  1560000 1586000
 							  1352000 1586000
 							  1144000 1352000
 							   936000 1248000
-							   728000 1248000 >;
+							   728000 1248000
+							   520000 1014000 >;
 					};
 				};
 			};
